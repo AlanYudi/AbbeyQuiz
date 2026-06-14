@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "axios": "^1.17.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mongodb": "^7.3.0",
+    "mongoose": "^9.7.0"
+  },
+  "name": "abbeyquiz",
+  "version": "1.0.0",
+  "description": "O AbbeyQuiz é uma aplicação web interativa de quiz musical no estilo Full-Stack. O jogo desafia os usuários a adivinharem o nome da música ou o artista com base em uma breve prévia de áudio tocada por um tempo determinado.",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanYudi/AbbeyQuiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlanYudi/AbbeyQuiz/issues"
+  },
+  "homepage": "https://github.com/AlanYudi/AbbeyQuiz#readme"
+}

@@ -1,0 +1,14 @@
+# Dependências do Node (esta é a pasta gigante que você não quer enviar)
+node_modules/
+
+# Variáveis de ambiente / Arquivos de configuração secretos (senhas, chaves de API, banco de dados)
+.env
+.env.local
+
+# Arquivos de log do sistema ou do NPM (gerados quando ocorrem erros)
+*.log
+npm-debug.log*
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
