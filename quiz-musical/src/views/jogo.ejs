@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbbeyQuiz - Jogando</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>De quem é esta música?</h2>
+        
+        <audio id="player-musica" src="<%= musica.preview %>"></audio>
+
+        <div class="controles-jogo">
+            <button id="btn-ouvir" class="btn-jogar">Ouvir Trecho (5s)</button>
+        </div>
+
+        <div class="opcoes">
+            <% opcoes.forEach(function(opcao) { %>
+                <button class="btn-opcao" onclick="verificarResposta('<%= opcao %>')">
+                    <%= opcao %>
+                </button>
+            <% }); %>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('player-musica');
+        const btnOuvir = document.getElementById('btn-ouvir');
+        const musicaCorreta = "<%= musica.title %>";
+        let tempoLimite = 5000;
+
+        btnOuvir.addEventListener('click', () => {
+            audio.currentTime = 0;
+            audio.play();
+            btnOuvir.disabled = true;
+            btnOuvir.innerText = "Ouvindo...";
+
+            setTimeout(() => {
+                audio.pause();
+                btnOuvir.disabled = false;
+                btnOuvir.innerText = "Ouvir Trecho (5s)";
+            }, tempoLimite);
+        });
+
+        function verificarResposta(respostaSelecionada) {
+            audio.pause();
+            if (respostaSelecionada === musicaCorreta) {
+                alert("🎉 PARABÉNS! Você acertou de primeira!");
+            } else {
+                alert(`❌ Que pena! A música correta era: ${musicaCorreta}`);
+            }
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
