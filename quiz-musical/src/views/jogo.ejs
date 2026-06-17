@@ -1,58 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AbbeyQuiz - Jogando</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Quiz Musical</title>
 </head>
 <body>
-    <div class="container">
-        <h2>De quem é esta música?</h2>
-        
-        <audio id="player-musica" src="<%= musica.preview %>"></audio>
 
-        <div class="controles-jogo">
-            <button id="btn-ouvir" class="btn-jogar">Ouvir Trecho (5s)</button>
-        </div>
+    <h1>Adivinhe a Música</h1>
 
-        <div class="opcoes">
-            <% opcoes.forEach(function(opcao) { %>
-                <button class="btn-opcao" onclick="verificarResposta('<%= opcao %>')">
-                    <%= opcao %>
-                </button>
-            <% }); %>
-        </div>
-    </div>
+    <button id="playBtn">
+        Ouvir Música
+    </button>
 
-    <script>
-        const audio = document.getElementById('player-musica');
-        const btnOuvir = document.getElementById('btn-ouvir');
-        const musicaCorreta = "<%= musica.title %>";
-        let tempoLimite = 5000;
+    <br><br>
 
-        btnOuvir.addEventListener('click', () => {
-            audio.currentTime = 0;
-            audio.play();
-            btnOuvir.disabled = true;
-            btnOuvir.innerText = "Ouvindo...";
+    <input
+        type="text"
+        id="resposta"
+        placeholder="Digite o nome da música"
+    >
 
-            setTimeout(() => {
-                audio.pause();
-                btnOuvir.disabled = false;
-                btnOuvir.innerText = "Ouvir Trecho (5s)";
-            }, tempoLimite);
-        });
+    <button id="enviarBtn">
+        Enviar
+    </button>
 
-        function verificarResposta(respostaSelecionada) {
-            audio.pause();
-            if (respostaSelecionada === musicaCorreta) {
-                alert("🎉 PARABÉNS! Você acertou de primeira!");
-            } else {
-                alert(`❌ Que pena! A música correta era: ${musicaCorreta}`);
-            }
-            window.location.reload();
-        }
-    </script>
+    <p id="resultado"></p>
+
+    <script src="/js/jogo.js"></script>
+
 </body>
 </html>
