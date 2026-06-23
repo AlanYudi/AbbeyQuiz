@@ -141,12 +141,12 @@ document
         respostaCorreta
     ) {
 
-        alert("🎉 Acertou!");
+        alert("Acertou!");
 
     } else {
 
         alert(
-            `❌ Errou!\n\nA resposta era:\n${musicaAtual.titulo}`
+            `Errou!\n\nA resposta era:\n${musicaAtual.titulo}`
         );
 
     }

@@ -57,9 +57,7 @@ app.post("/admin", async (req, res) => {
 
         if (!musica) {
 
-            return res.send(
-                "Música não encontrada."
-            );
+            return res.redirect("/admin");
 
         }
 
@@ -70,9 +68,7 @@ app.post("/admin", async (req, res) => {
 
         if (existente) {
 
-            return res.send(
-                "Essa música já está cadastrada."
-            );
+            return res.redirect("/admin");
 
         }
 
@@ -88,17 +84,13 @@ app.post("/admin", async (req, res) => {
 
         });
 
-        res.send(
-            "Música adicionada com sucesso!"
-        );
+        return res.redirect("/admin");
 
     } catch (erro) {
 
         console.error(erro);
 
-        res.status(500).send(
-            "Erro ao adicionar música."
-        );
+        return res.redirect("/admin");
 
     }
 

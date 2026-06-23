@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Quiz Musical</title>
 
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Jogar</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css">
+
 </head>
 <body>
 
-    <div class="container">
+<div class="beatles"></div>
 
-        <h1>🎵 Quiz Musical</h1>
+<div class="container">
 
-        <button id="playBtn">
-            Ouvir Música
-        </button>
+    <h1>AbbeyQuiz</h1>
+
+    <button
+        id="playBtn"
+        class="btn">
+
+        Ouvir Música
+
+    </button>
+
+    <div class="input-area">
 
         <input
-            type="text"
             id="resposta"
-            placeholder="Digite o nome da música"
-        >
+            type="text"
+            placeholder="Digite a música">
 
-        <button id="enviarBtn">
-            Responder
+        <button
+            id="enviarBtn"
+            class="btn-play">
+
+            ▶
+
         </button>
 
     </div>
 
-    <script src="/js/jogo.js"></script>
+    <a
+        href="/"
+        class="btn">
+
+        Voltar
+
+    </a>
+
+</div>
+
+<script src="/js/jogo.js"></script>
 
 </body>
 </html>
