@@ -19,8 +19,6 @@ body{
     position:relative;
 }
 
-/* Painel azul */
-
 .container{
 
     width:400px;
@@ -40,8 +38,6 @@ body{
     gap:18px;
 }
 
-/* Título */
-
 h1{
 
     font-size:4rem;
@@ -50,8 +46,6 @@ h1{
 
     margin-bottom:25px;
 }
-
-/* Botões padrão */
 
 .btn{
 
@@ -87,8 +81,6 @@ h1{
     color:white;
 }
 
-/* Campo de texto */
-
 input{
 
     width:180px;
@@ -106,8 +98,6 @@ input{
     outline:none;
 }
 
-/* Linha do input + botão */
-
 .input-area{
 
     display:flex;
@@ -116,8 +106,6 @@ input{
 
     gap:6px;
 }
-
-/* Botão verde */
 
 .btn-play{
 
@@ -138,25 +126,4 @@ input{
     font-weight:bold;
 }
 
-/* Imagem lateral */
 
-.beatles{
-
-    position:absolute;
-
-    right:0;
-
-    top:0;
-
-    width:230px;
-
-    height:100%;
-
-    background-image:url("/img/beatles.png");
-
-    background-repeat:no-repeat;
-
-    background-position:right center;
-
-    background-size:contain;
-}
